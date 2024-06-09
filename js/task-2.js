@@ -25,7 +25,7 @@ const images = [
       alt: "Lighthouse Coast Sea",
     },
   ];
-const list = document.querySelector(".js-list");
+const list = document.querySelector(".gallery");
 
 function createMarkup(arr) {
   
