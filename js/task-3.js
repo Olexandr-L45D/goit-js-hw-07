@@ -1,5 +1,5 @@
 //3
-const inputuzertext = document.querySelector(.js-uzertext);
+const inputuzertext = document.querySelector(`.js-uzertext`);
  inputuzertext.addEventListener('input', handlerinput);
 
    function handlerinput(evt) {
