@@ -11,7 +11,7 @@ function getRandomHexColor() {
   const span = document.querySelector('span')
   span.textContent = evt.currentTarget.value;
   if (evt.currentTarget.value) {
-    getRandomHexColor
+    document.body.style.backgroundColor
   }
   }
   
