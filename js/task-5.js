@@ -14,4 +14,5 @@ function getRandomHexColor() {
     getRandomHexColor
   }
   }
-  clickbutton.insertAdjacentHTML('beforeend', getRandomHexColor())
+  
+  console.log(getRandomHexColor(clickbutton));
