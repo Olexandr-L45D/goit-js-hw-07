@@ -38,6 +38,5 @@ function createMarkup(arr) {
 };
 
  list.insertAdjacentHTML('beforeend', createMarkup(images))
-// list.style.listStyle = 'none';
-// list.style.color = 'red'
-// list.style.fontSize = '20px'
+list.style.listStyle = 'none';
+list.style.fontSize = '20px'
