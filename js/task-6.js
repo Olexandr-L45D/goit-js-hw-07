@@ -10,7 +10,7 @@ refs.btnDestroy.addEventListener('click', onDestroyBtnClick);
 
    function onCreateBtnClick(event) {
     const inputValue = refs.inputNumber.value.trim();
-    if  (inputValue >= 1 || inputValue <= 100 ) {
+    if  (inputValue >= 1 | inputValue <= 100 ) {
       alert(`enter the correct value`)
       return inputValue;
    }
