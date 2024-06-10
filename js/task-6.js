@@ -45,7 +45,7 @@ function createBoxes(amount) {
  }
   this.elements.push(`newElement`);
 }
-//this.elements.push(newElement);
+this.elements.push(newElement);
 
 
 
