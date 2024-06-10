@@ -11,12 +11,14 @@ refs.btnDestroy.addEventListener('click', onDestroyBtnClick);
    function onCreateBtnClick(event) {
     const inputValue = refs.inputNumber.value.trim();
     if  (inputValue >= 1 || inputValue <= 100 ) {
-      alert(`enter the correct value`)
-      return inputValue;
+      return inputValue;}
+       else {
+        alert(`enter the correct value`)
+      }
    }
-   createBoxes(inputValue);
-  }
 
+   createBoxes(inputValue);
+  
   function onDestroyBtnClick(event) {
     destroyBoxes();
   }
