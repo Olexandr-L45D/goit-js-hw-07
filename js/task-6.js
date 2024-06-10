@@ -1,55 +1,49 @@
 //6
+const refs = {
+  boxeses: document.querySelector('#boxes'),
+  btnCreate: document.querySelector('.js-but-create'),
+  btnDestroy: document.querySelector('.js-but-delete'),
+  inputNumber: document.querySelector('.js-uze-number')
+}
+refs.btnCreate.addEventListener('click', onCreateBtnClick);
+refs.btnDestroy.addEventListener('click', onDestroyBtnClick);
+
+   function onCreateBtnClick(event) {
+    const inputValue = refs.inputNumber.value.trim();
+    if  (inputValue >= 1 || inputValue <= 100 ) {
+      alert(`enter the correct value`)
+      return inputValue;
+   }
+   createBoxes(inputValue);
+  }
+
+  function onDestroyBtnClick(event) {
+    destroyBoxes();
+  }
+  
+function destroyBoxes() {
+  input.value = '';
+}
+
+function createBoxes(amount) {
+ let sizes = 30;
+ const elements = [];
+ for (let i = 0; i < amount; i++) {
+  const newElement = document.createElement('div');
+  newElement.style.width = `${sizes}px`;
+  newElement.style.height = `${sizes}px`;
+  sizes += 10;
+  newElement.style.backgroundColor = getRandomHexColor();
+ }
+ //this.elements.push(newElement);
+}
+this.elements.push(newElement);
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
-const inputNumber = document.querySelector('.js-uze-number');
-inputNumber.addEventListener('input', handlerinput);
-let stepDiv = 0;
-let createDiv = 0;
 
-  function handlerinput(evt) { 
-const refs = {
-      boxeses: document.querySelector('#boxes'),
-      btnCreate: document.querySelector('.js-but-create'),
-      btnDestroy: document.querySelector('.js-but-delete'),
-  }
-   const INTERVAL_DELAY = 1000;
-  let intervalId = 1;
-  refs.btnCreate.addEventListener('click', onCreate);
-  //refs.btnDestroy.addEventListener('click', onDelete);
-  // ця додає елемент(div)
-    function onCreate() {
-createDiv += 1;
-const newElement = document.createElement('div');
-newElement.textContent = 'Новий box';
-const creatnewDiv = document.querySelector('#boxes');
-creatnewDiv.appendChild(newElement);
-  }
-}
-// ця змінює кольор(та має додавати по 10рх)
-let box = document.querySelector('#boxes');
-const clickbutton = document.querySelector('.js-but-create');
-const backcolor = document.querySelector('#boxes');
-clickbutton.addEventListener('click', handlerClick);
 
-   function handlerClick() {
-    document.body.style.color = getRandomHexColor();
-    backcolor.textContent = document.body.style.color;
-    stepDiv += 10;
-  box.style.width = `${stepDiv}px`;
-  box.style.height = `${stepDiv}px`;
-   backcolor.style = box.style.width;
-   backcolor.style = box.style.height;
-  }
-// ця перевіряє на число
-  function createBoxes(amount) {
-  if  (evt.currentTarget.value <= 100 ) {
-    input.textContent;
-}
-// ця чисте input
-}
-function destroyBoxes() {
-  input.reset()
-}
+
