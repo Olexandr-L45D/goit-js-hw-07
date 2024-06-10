@@ -8,6 +8,7 @@ const inputNumber = document.querySelector('.js-uze-number');
 inputNumber.addEventListener('input', handlerinput);
 let stepDiv = 0;
 let createDiv = 0;
+
   function handlerinput(evt) { 
 const refs = {
       boxeses: document.querySelector('#boxes'),
@@ -32,19 +33,20 @@ let box = document.querySelector('#boxes');
 const clickbutton = document.querySelector('.js-but-create');
 const backcolor = document.querySelector('#boxes');
 clickbutton.addEventListener('click', handlerClick);
+
    function handlerClick() {
     document.body.style.color = getRandomHexColor();
     backcolor.textContent = document.body.style.color;
     stepDiv += 10;
-  box.style.width = ${stepDiv}px;
-  box.style.height = ${stepDiv}px;
+  box.style.width = `${stepDiv}px`;
+  box.style.height = `${stepDiv}px`;
    backcolor.style = box.style.width;
    backcolor.style = box.style.height;
   }
 // ця перевіряє на число
   function createBoxes(amount) {
   if  (evt.currentTarget.value <= 100 ) {
-    input.textContent = evt.currentTarget.value;
+    input.textContent;
 }
 // ця чисте input
 }
