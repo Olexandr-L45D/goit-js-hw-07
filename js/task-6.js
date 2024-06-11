@@ -7,7 +7,7 @@ const refs = {
 refs.btnCreate.addEventListener('click', onCreateBtnClick);
 refs.btnCreate.addEventListener('click', createBoxes);
 refs.btnDestroy.addEventListener('click', onDestroyBtnClick);
-const boxesDiv = document.getElementById('#boxes');
+const boxesDiv = document.getElementById('boxes');
    function onCreateBtnClick(event) {
     const inputValue = refs.inputNumber.value.trim();
     if  (inputValue <= 1 || inputValue >= 100 ) {
