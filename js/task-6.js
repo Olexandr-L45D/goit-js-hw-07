@@ -7,7 +7,7 @@ const refs = {
 refs.btnCreate.addEventListener('click', onCreateBtnClick);
 refs.btnCreate.addEventListener('click', createBoxes);
 refs.btnDestroy.addEventListener('click', onDestroyBtnClick);
-
+const boxesDiv = document.getElementById('#boxes');
    function onCreateBtnClick(event) {
     const inputValue = refs.inputNumber.value.trim();
     if  (inputValue <= 1 || inputValue >= 100 ) {
@@ -36,16 +36,9 @@ function createBoxes(amount) {
  }
   elements.push('newElement');
 }
-
+boxesDiv.textContent = ''; 
 function onDestroyBtnClick(event) {
-  // const deletDiv = document.querySelector('#boxes');
-  // deletDiv.remove('div');
-  newElement.textContent = '';
-  destroyBoxes();
+  boxesDiv.textContent = '';
  }
  
-function destroyBoxes() {
-  inputValue = "";
-}
-
 
