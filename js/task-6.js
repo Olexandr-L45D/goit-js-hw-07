@@ -13,19 +13,9 @@ refs.btnDestroy.addEventListener('click', onDestroyBtnClick);
     if  (inputValue <= 1 || inputValue >= 100 ) {
       alert(`enter the correct value`)
       return ;}
-      createBoxes();
+      createBoxes(inputValue);
    }
-  createBoxes();
-
-  function onDestroyBtnClick(event) {
-   destroyBoxes();
-  }
-  onDestroyBtnClick()
-
-function destroyBoxes() {
-  input.value = "";
-}
-
+  
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
@@ -43,11 +33,19 @@ function createBoxes(amount) {
   newElement.style.height = `${sizes}px`;
   sizes += 10;
   newElement.style.backgroundColor = getRandomHexColor();
-  creatnewDiv.style.backgroundColor = getRandomHexColor();
-  creatnewDiv.textContent = elements.style.backgroundColor;
-  newElement.textContent = elements.style.backgroundColor;
  }
   elements.push('newElement');
+}
+
+function onDestroyBtnClick(event) {
+  // const deletDiv = document.querySelector('#boxes');
+  // deletDiv.remove('div');
+  newElement.textContent = '';
+  destroyBoxes();
+ }
+ 
+function destroyBoxes() {
+  inputValue = "";
 }
 
 
