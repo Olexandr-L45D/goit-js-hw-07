@@ -8,11 +8,9 @@ function handlerGetform(evt) {
     email: email.value.trim(),
     password: password.value.trim(),
   };
-  if ( email.value.trim()  === "") {
+  if ( email.value.trim()  === "" || password.value.trim()  === "" ) {
     alert("All form fields must be filled in") 
-}
-if ( password.value.trim()  === "") {
-    alert("All form fields must be filled in")  
+    return;
 }
   console.log(datase);
   form.reset()
